@@ -26,7 +26,7 @@ public class CallbyValueRefDemo {
 		change(i, j);
 		System.out.println(i + "," + j[3]);
 
-		int[] lotto = { 3, 5, 12, 45, 23, 1 };
+		int[] lotto = { 23, 45, 5, 12, 3, 1 };
 		ascending(lotto);
 		for (int value : lotto) {
 			System.out.print(value + "\t");

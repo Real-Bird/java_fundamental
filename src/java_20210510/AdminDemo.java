@@ -5,6 +5,7 @@ public class AdminDemo {
 	public static void main(String[] args) {
 		Admin a = new Admin("abc", "123", "abd@abc.abc", 20);
 		
+		System.out.println();
 		System.out.println(a.getId());
 		System.out.println(a.getPwd());
 		System.out.println(a.getEmail());
