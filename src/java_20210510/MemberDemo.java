@@ -12,6 +12,7 @@ public class MemberDemo {
 	}
 	public static void main(String[] args) {
 		Member m = new Member();
+		
 		m.setName("홍길동");
 		m.setEmail("abc@abc.abc");
 		m.setAddr1("여기시 저기구 거기동");

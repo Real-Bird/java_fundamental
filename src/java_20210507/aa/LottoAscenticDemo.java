@@ -1,16 +1,16 @@
 package java_20210507.aa;
 
-public class LottoAscenticDemo {
+public class LottoAscenticDemo extends Ascending {
 
 	public static void main(String[] args) {
-		Lotto lotto = new Lotto();
+		Lotto l = new Lotto();
 		Ascending asc = new Ascending();
 		
-		asc.print(lotto.lottery());
-		asc.print(lotto.lottery());
-		asc.print(lotto.lottery());
-		asc.print(lotto.lottery());
-		asc.print(lotto.lottery());
-
+		asc.ascending(l.lottery());
+		asc.ascending(l.lottery());
+		asc.ascending(l.lottery());
+		asc.ascending(l.lottery());
+		asc.ascending(l.lottery());
+		
 	}
 }

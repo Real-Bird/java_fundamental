@@ -1,7 +1,7 @@
 package java_20210507.aa;
 
 public class Lotto {
-	private int[] array = new int[6];
+	public int[] array = new int[6];
 
 	public int[] lottery() {
 

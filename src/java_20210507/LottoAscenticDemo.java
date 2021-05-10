@@ -4,7 +4,6 @@ public class LottoAscenticDemo {
 
 	public static void main(String[] args) {
 		
-
 	}
 
 }
