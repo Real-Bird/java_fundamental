@@ -6,7 +6,7 @@ public class Admin {
 	private String email;
 	private int level;
 	
-	//디폴트 생성자(parameter 없음)
+	//디폴트 생성자(arguments 없음)
 	//생성자 > [접근한정자 [클래스 이름](){}
 	//생성자는 반환값이 없음
 	//생성자 역할은 인스턴스 변수 초기화

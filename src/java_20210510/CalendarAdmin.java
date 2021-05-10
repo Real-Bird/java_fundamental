@@ -30,8 +30,8 @@ public class CalendarAdmin {
 	public CalendarAdmin(int year, int month, int day){
 		super();
 		this.year = year;
-		this.month = year;
-		this.day = year;
+		this.month = month;
+		this.day = day;
 	}
 	
 	private boolean isLeafYear(int year) {
@@ -49,11 +49,13 @@ public class CalendarAdmin {
 	}
 
 	private int getCount(int year, int month, int day) {
-		int totalCount = 365 * (year - 1) + (year - 1) / 4 - (year - 1) * 100 + (year - 1) * 400;
+		int totalCount = 365 * (year - 1) + (year - 1) / 4 - (year - 1) / 100 + (year - 1) / 400;
+		
 		boolean isLeafYear = isLeafYear(year);
 		if (isLeafYear) {
 			monthArray[1] = 29;
 		}
+		
 		for (int i = 0; i < month - 1; i++) {
 			totalCount += monthArray[i];
 		}

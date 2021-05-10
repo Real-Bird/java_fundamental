@@ -35,14 +35,14 @@ public class MethodDemo {
 		return year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
 	}
 
-	public int plus(int first, int second) { // first, second => 매개변수(parameter)
+	public int plus(int first, int second) { // first, second => 매개변수(arguments)
 		return first + second;
 	}
 
 	public static void main(String[] args) {
 		MethodDemo m = new MethodDemo();
 
-		int sum = m.plus(10, 20); // 10, 20 => 인자(arguments)
+		int sum = m.plus(10, 20); // 10, 20 => 인자(parameter)
 
 		System.out.printf("%d %n", sum);
 
