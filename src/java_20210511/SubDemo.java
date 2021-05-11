@@ -25,8 +25,7 @@ public class SubDemo {
 		System.out.println(sub.toString()); // Object클래스의 toString()메서드
 		
 		Object obj = new Sub();
-		System.out.println(obj.toString()); // Sub클래스와 overriding 상태
+		System.out.println(obj.toString()); // Sub클래스와 overriding 상태, Sub클래스 toString() 호출
 		
 	}
-
 }
