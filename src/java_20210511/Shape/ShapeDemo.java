@@ -6,8 +6,11 @@ public class ShapeDemo {
 		ShapeManager manager = ShapeManager.getInstance();
 		Triangle t = new Triangle();
 		Rectangle r = new Rectangle();
+		Circle c = new Circle();
 
 		manager.run(r);
+		manager.run(t);
+		manager.run(c);
 	}
 
 }
