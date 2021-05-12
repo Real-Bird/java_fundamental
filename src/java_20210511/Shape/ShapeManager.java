@@ -6,12 +6,12 @@ public class ShapeManager {
 
 	private ShapeManager() {
 	}
-
+	//            클래스 타입 반환형
 	public static ShapeManager getInstance() {
 		if (single == null) {
-			single = new ShapeManager();
+			single = new ShapeManager();//인스턴스 생성
 		}
-		return single;
+		return single;//생성된 인스턴스 리턴
 	}
 
 	public void run(Shape s) {
