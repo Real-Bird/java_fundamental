@@ -12,7 +12,7 @@ public class Calendar {
 	public static final int SATURDAY = 6;
 	public static final int SUNDAY = 0;
 	
-	private boolean isLeafYear(int year) {
+	private boolean isLeapYear(int year) {
 		return year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
 	}
 
@@ -29,8 +29,8 @@ public class Calendar {
 	}
 
 	private void change(int year) {
-		boolean isLeafYear = isLeafYear(year);
-		if (isLeafYear) {
+		boolean isLeapYear = isLeapYear(year);
+		if (isLeapYear) {
 			monthArray[1] = 29;
 		}
 	}

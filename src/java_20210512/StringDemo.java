@@ -2,12 +2,11 @@ package java_20210512;
 
 public class StringDemo {
 	public static String reverse(String str) {
-		String[] s = new String[str.length()];
-		for (int i = 0; i < str.length(); i++) {
-			s[i] += str.substring(i, i+1);
+		String temp = new String();
+		for (int i = str.length()-1; i > -1; i--) {
+			temp += str.substring(i, i+1);
 		}
-		
-		return "";
+		return temp;
 	}
 	
 	public static void main(String[] args) {
