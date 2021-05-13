@@ -40,9 +40,17 @@ public class StringDemo {
 
 		// equals() : 문자열 내용 비교 //equalsIgnoreCase() : 대소문자 구분X 비교
 		// trim() : 앞뒤 공백 제거
-		String m1 = new String(" hello ").trim();
+		String m1 = new String("hello ").trim();
 		String m2 = new String("hello");
 		if (m1.equals(m2)) {
+			System.out.println("true");
+		} else {
+			System.out.println("false");
+		}
+		
+		String ma = new String("HELLO");
+		String mb = new String("hello");
+		if (ma.equalsIgnoreCase(mb)) {
 			System.out.println("true");
 		} else {
 			System.out.println("false");
