@@ -1,4 +1,4 @@
-package java_20210513;
+package java_20210513.prac;
 
 public class SetpracDemo extends Setprac {
 
