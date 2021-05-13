@@ -36,10 +36,10 @@ public class SetDemo {
 			System.out.println(temp);
 		}
 		System.out.println();
-		
-		//TreeSet을 이용한 로또 번호 뽑기
+
+		// TreeSet을 이용한 로또 번호 뽑기
 		TreeSet lottoset = new TreeSet();
-		
+
 		while (true) {
 			int random = (int) (Math.random() * 45) + 1;
 			lottoset.add(random); // auto-boxing / Integer.valueOf() 생략
@@ -53,4 +53,5 @@ public class SetDemo {
 			System.out.print(temp + "\t");
 		}
 	}
+
 }
