@@ -3,21 +3,10 @@ package java_20210512;
 public class StringDemo {
 	public static String reverse(String str) {
 		String[] s = new String[str.length()];
-		int count = 0;
 		for (int i = 0; i < str.length(); i++) {
-			for (int j = i; j <= str.length(); j++) {
-				s[i] += str.substring(i, j);
-				count++;
-			}
+			s[i] += str.substring(i, i+1);
 		}
-		String k = null;
-		for (int i = 0; i < str.length(); i++) {
-			if(count==1) {
-				k = s[i];
-				s[i] = s[i+1];
-				s[i+1] = k;
-			}
-		}
+		
 		return "";
 	}
 	
