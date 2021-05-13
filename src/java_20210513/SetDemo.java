@@ -35,11 +35,14 @@ public class SetDemo {
 			String temp = (String) i.next();
 			System.out.println(temp);
 		}
-
+		System.out.println();
+		
+		//TreeSet을 이용한 로또 번호 뽑기
 		TreeSet lottoset = new TreeSet();
+		
 		while (true) {
 			int random = (int) (Math.random() * 45) + 1;
-			lottoset.add(random);
+			lottoset.add(random); // auto-boxing / Integer.valueOf() 생략
 			if (lottoset.size() == 6)
 				break;
 		}
@@ -49,6 +52,5 @@ public class SetDemo {
 			Integer temp = (Integer) i2.next();
 			System.out.print(temp + "\t");
 		}
-
 	}
 }
