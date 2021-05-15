@@ -13,7 +13,7 @@ public class CalendarDemo {
 		 */
 		int year = 2021;
 		int month = 5;
-		int day = 4;
+		int day = 14;
 		//2020년까지 총 일수 + 윤년 일수 - 100의 배수 + 400의 배수
 		//int dsum = 365 * (year - 1) + (year - 1)/4 - (year - 1) / 100 + (year - 1) / 400;
 		

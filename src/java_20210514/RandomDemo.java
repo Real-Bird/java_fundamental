@@ -14,7 +14,7 @@ public class RandomDemo {
 			System.out.println(i + ":" + rand2.nextInt());
 		}
 
-		int[] number = new int[1000];
+		int[] number = new int[10000];
 		int[] counter = new int[45];
 
 		for (int i = 0; i < number.length; i++) {
