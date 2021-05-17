@@ -24,7 +24,7 @@ public class ThrowDemo {
 		double balance = 0;
 
 		try {
-			balance = withdraw("123-123-123456", 90000);
+			balance = withdraw("123-123-123456", 9000);
 			System.out.printf("잔고 : %.0f", balance);
 		} catch (InsufficientBalanceException e) {
 			System.err.println(e.getMessage());
