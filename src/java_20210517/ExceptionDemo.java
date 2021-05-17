@@ -6,7 +6,7 @@ public class ExceptionDemo {
 	public static void main(String[] args) {
 		// java.lang.NumberFormatException
 		// 1111a => 예외처리
-		int i = Integer.parseInt("11111");
+		int i = Integer.parseInt("1111a");
 		System.out.println(i);
 		/*
 		 * Exception in thread "main" java.lang.NumberFormatException: For input string:"1111a" ③현 에러 최상위 에러 클래스 at
