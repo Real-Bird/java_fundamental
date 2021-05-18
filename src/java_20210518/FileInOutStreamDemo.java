@@ -12,7 +12,7 @@ public class FileInOutStreamDemo {
 		
 		try {
 			//매개변수 path에 파일이 존재하지 않으면 예외 발생
-			//
+			//이때 경로와 파일명을 같이 살펴봐야함.
 			fis = new FileInputStream("C:\\dev\\test\\2021\\05\\18\\eclipse.zip");
 			
 			//매개변수 path의 디렉토리가 존재하지 않으면 예외 발생
