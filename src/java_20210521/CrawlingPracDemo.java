@@ -7,9 +7,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
-import java.net.URI;
 import java.net.URL;
-import java.util.ArrayList;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -28,19 +26,20 @@ public class CrawlingPracDemo {
 			System.out.println("성공");
 
 			BufferedReader br = new BufferedReader(isr);
-			FileWriter fw = new FileWriter("C:\\dev\\test\\2021\\05\\21\\Crawling.csv");
-			BufferedWriter bw = new BufferedWriter(fw);
+			//FileWriter fw = new FileWriter("C:\\dev\\test\\2021\\05\\23\\Crawling.csv");
+			//BufferedWriter bw = new BufferedWriter(fw);
 			Elements elements = doc.select(".wikitable tbody tr td a");
 			for (Element element : elements) {
 				System.out.println(element);
 			
 			}
-			String readLine = elements.text();
+			/*String readLine = null;
 			while ((readLine = br.readLine()) != null) {
 				bw.write(readLine);
 				bw.newLine();
 			}
 			bw.flush();
+			*/
 
 		} catch (MalformedURLException e1) {
 			e1.printStackTrace();
