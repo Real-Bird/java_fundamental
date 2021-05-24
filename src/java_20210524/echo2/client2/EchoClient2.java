@@ -65,6 +65,6 @@ public class EchoClient2 {
 
 	public static void main(String[] args) {
 		// cmd -> ipconfig -> IPv4 -> 192.168.0.63(교육장) 
-		new EchoClient2("192.168.0.28", 3000).run();
+		new EchoClient2("192.168.0.63", 3000).run();
 	}
 }
