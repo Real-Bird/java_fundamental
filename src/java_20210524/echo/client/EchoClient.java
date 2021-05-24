@@ -8,7 +8,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.net.Socket;
-import java.net.UnknownHostException;
+import java.util.Scanner;
 
 public class EchoClient {
 	private String ip;
@@ -17,6 +17,12 @@ public class EchoClient {
 	public EchoClient(String ip, int port) {
 		this.ip = ip;
 		this.port = port;
+	}
+
+	public String console(String msg) {
+		System.out.print(msg);
+		Scanner sc = new Scanner(System.in);
+		return sc.next();
 	}
 
 	public void run() {
@@ -36,16 +42,20 @@ public class EchoClient {
 			OutputStream out = socket.getOutputStream();
 			osw = new OutputStreamWriter(out);
 			bw = new BufferedWriter(osw);
-			bw.write("무야호~");
-			bw.newLine();
-			bw.flush();
-			
 			// 6-4
 			InputStream in = socket.getInputStream();
 			isr = new InputStreamReader(in);
 			br = new BufferedReader(isr);
-			String readLine = br.readLine();
-			System.out.println("서버 메세지 : " + readLine);
+
+			while (true) {
+				String message = console("메세지> ");
+				bw.write(message);
+				bw.newLine();
+				bw.flush();
+				
+				String readLine = br.readLine();
+				System.out.println("서버 메세지 : " + readLine);
+			}
 		} catch (IOException e) {
 			System.err.println("서버 접속에 실패했습니다.");
 		}

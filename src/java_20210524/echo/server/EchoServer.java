@@ -10,6 +10,7 @@ import java.io.OutputStreamWriter;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Scanner;
 
 public class EchoServer {
 	private int port;
@@ -43,19 +44,22 @@ public class EchoServer {
 				// 5. Socket을 이용해 클라이언트와 통신할 수 있는 입출력 스트림 생성
 				// 6-2
 				InputStream in = socket.getInputStream();
-				isr = new InputStreamReader(in);
-				br = new BufferedReader(isr);
-				String readLine = br.readLine();
-				System.out.println("클라이언트 메세지 : " + readLine);
-				
 				// 6-3
 				OutputStream out = socket.getOutputStream();
+
+				isr = new InputStreamReader(in);
+				br = new BufferedReader(isr);
 				osw = new OutputStreamWriter(out);
 				bw = new BufferedWriter(osw);
-				bw.write("그만큼 신나신다는 거지~");
+
+				while(true) {
+				String readLine = br.readLine();
+				System.out.println("클라이언트 메세지 : " + readLine);
+
+				bw.write("그만큼 신나시다는 거지~");
 				bw.newLine();
 				bw.flush();
-
+				}
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
