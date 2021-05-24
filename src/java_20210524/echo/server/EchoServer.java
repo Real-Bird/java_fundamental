@@ -68,7 +68,7 @@ public class EchoServer {
 
 	public static void main(String[] args) {
 		// 2번 이상 객체를 사용할 경우 아래와 같이 객체 생성
-		// EchoServer echoServer = new EchoServer(3000);
+		// EchoServer echoServer = new EchoServer(3000); 
 		// echoServer.run();
 		new EchoServer(3000).run();
 	}
