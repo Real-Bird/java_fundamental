@@ -33,9 +33,9 @@ public class JdbcInsertDemo {
 			
 			// 4. 바인딩 변수 설정하기
 			int index = 1;
-			pstmt.setInt(index++, 11);
-			pstmt.setString(index++, "두테르테");
-			pstmt.setString(index, "필리핀");
+			pstmt.setInt(index++, 3);
+			pstmt.setString(index++, "시진핑핑이");
+			pstmt.setString(index, "-짱-");
 			
 			// 5. SQl문 전송
 			int resultCount = pstmt.executeUpdate();
