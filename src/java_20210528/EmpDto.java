@@ -5,7 +5,7 @@ public class EmpDto {
 	private String name;
 	private String job;
 	private int mgr;
-	private String hiredate;
+	private String hiredate; // insert '2021-05-28' select date_format()
 	private double sal;
 	private double comm;
 	private int deptno;
