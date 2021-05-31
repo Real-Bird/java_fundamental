@@ -1,6 +1,6 @@
 package java_20210531;
 
-public class ExamPrac {
+public class ExamPrac extends Exam{
 	int num;
 	String name;
 	
@@ -55,6 +55,11 @@ public class ExamPrac {
 	public String toString() {
 		return "name";
 	}
+	
+	public void run(int a, int b) {
+		System.out.println("하위 클래스 오버라이딩");
+	}
+	
 	public static void main(String[] args) {
 		
 		ExamPrac ex1 = new ExamPrac("abc");
@@ -99,6 +104,12 @@ public class ExamPrac {
 		
 		System.out.println(sb.append("hello"));
 		System.out.println(sb.toString());
+		
+		ExamPrac exam = new ExamPrac();
+		exam.run(1, 2);
+		
+		Exam ex = new Exam();
+		ex.run(2, 2);
 		
 		
 	}
