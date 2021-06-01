@@ -118,6 +118,9 @@ public class ExamPrac extends Exam {
 		for(String value : list) {
 			System.out.println(value);
 		}
+		
+		String s = "78-890";
+		System.out.println(s.substring(3));
 
 	}
 
