@@ -25,7 +25,7 @@ public class DayCalc {
 			Date e_date = new SimpleDateFormat("yyyy-MM-dd").parse(endDate);
 			eDate.setTime(e_date);
 			
-			long diffDays = ((eDate.getTimeInMillis() - sDate.getTimeInMillis()))/1000 / 24 * 60 * 60;
+			long diffDays = ((eDate.getTimeInMillis() - sDate.getTimeInMillis()))/1000 / (24 * 60 * 60);
 			return diffDays;
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block

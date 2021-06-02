@@ -9,7 +9,7 @@ public class InterCalcDemo {
 	public static void main(String[] args) {
 		DayCalc dc = new DayCalc();
 		
-		dc.dayDiff("2020-05-17", "2021-01-27");
+		System.out.println(dc.dayDiff("2020-05-17", "2021-01-27") + "일");
 		dc.dayInter(5000000, 0.18);
 	}
 }
