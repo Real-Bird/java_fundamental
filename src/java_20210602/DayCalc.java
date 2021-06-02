@@ -18,14 +18,14 @@ public class DayCalc {
 		eDate = Calendar.getInstance();
 	}
 	
-	public long dayDiff(String startDate, String endDate) {
+	public int dayDiff(String startDate, String endDate) {
 		try {
 			Date s_date = new SimpleDateFormat("yyyy-MM-dd").parse(startDate);
 			sDate.setTime(s_date);
 			Date e_date = new SimpleDateFormat("yyyy-MM-dd").parse(endDate);
 			eDate.setTime(e_date);
 			
-			long diffDays = ((eDate.getTimeInMillis() - sDate.getTimeInMillis()))/1000 / (24 * 60 * 60);
+			int diffDays =(int) (((eDate.getTimeInMillis() - sDate.getTimeInMillis()))/1000 / (24 * 60 * 60));
 			return diffDays;
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
@@ -34,11 +34,11 @@ public class DayCalc {
 		}
 	}
 	
-	public void dayInter(int principal, double interRate) {
+	public int dayInter(int principal, double interRate) {
 		double beforeTax = principal * interRate/365;
 		double fxxkingTax = beforeTax * tax;
-		double dailyInter = beforeTax - fxxkingTax;
-		System.out.printf("원금 %,d원의 일일 이자는 %,.0f원입니다.", principal, dailyInter);
+		int dailyInter = (int) (beforeTax - fxxkingTax);
+		return dailyInter;
 	}
 	
 	
