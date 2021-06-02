@@ -5,7 +5,7 @@ public class InterestCalcDemo {
 	double interestRate;
 	int month;
 	static double tax = 0.154;
-	
+
 	public InterestCalcDemo() {
 
 	}
@@ -25,13 +25,13 @@ public class InterestCalcDemo {
 		System.out.printf("원금 %,d원에 대한 한 달 세전 이자는 %,.0f원입니다.%n", principal, beforeTax);
 		System.out.printf("원금 %,d원에 대한 한 달 세후 이자는 %,.0f원입니다.%n%n", principal, interest);
 	}
-	
+
 	public static void main(String[] args) {
 		InterestCalcDemo inter = new InterestCalcDemo();
-		
+
 		inter.interMonth(5000000, 0.18, 6);
 		inter.interMonth(1000000, 0.18, 6);
-		
+
 		inter.interOneMonth(5000000, 0.18, 6);
 		inter.interOneMonth(1000000, 0.18, 6);
 	}
