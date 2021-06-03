@@ -4,6 +4,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Scanner;
 
 public class DelayInterCalc {
 	Calendar sDate;
@@ -11,7 +12,7 @@ public class DelayInterCalc {
 	int principal;
 	double interRate;
 	static double tax = 0.154;
-
+	Scanner scan = new Scanner(System.in);
 	public DelayInterCalc() {
 		sDate = Calendar.getInstance();
 		eDate = Calendar.getInstance();
