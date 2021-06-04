@@ -13,6 +13,7 @@ public class DelayInterCalc {
 	double interRate;
 	static double tax = 0.154;
 	Scanner scan = new Scanner(System.in);
+
 	public DelayInterCalc() {
 		sDate = Calendar.getInstance();
 		eDate = Calendar.getInstance();
@@ -33,7 +34,6 @@ public class DelayInterCalc {
 			return 0;
 		}
 	}
-
 	public int dayInter(int principal, double interRate) {
 		double beforeTax = principal * interRate / 365;
 		double fxxkingTax = beforeTax * tax;

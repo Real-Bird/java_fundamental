@@ -9,7 +9,7 @@ public class InterCalcDemo_v2 {
 		DayCalc dc = new DayCalc();
 		DelayInterCalc dic = new DelayInterCalc();
 		Scanner scan = new Scanner(System.in);
-
+		
 			System.out.print("시작 날짜를 입력해주세요.> ");
 			String input1 = scan.nextLine();
 			System.out.print("종료 날짜를 입력해주세요.> ");
@@ -35,7 +35,6 @@ public class InterCalcDemo_v2 {
 
 			System.out.printf("정상 기간과 연체 기간의 총 투자일은 %d일이며,%n총 합산 이자는 %,d원입니다.%n", dayDiff + delayDiff,
 					dayInter * dayDiff + delayInter * delayDiff);
-
 	}
-
+	
 }
