@@ -8,6 +8,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -18,7 +19,7 @@ public class CrawlingPracDemo {
 	public static void main(String[] args) {
 		try {
 			Document doc = null;
-			String address = "https://kras.kosha.or.kr/health/health_tab02";
+			String address = "https://news.seoul.go.kr/welfare/archives/201281";
 			URL url = new URL(address);
 			InputStream in = url.openStream();
 			InputStreamReader isr = new InputStreamReader(in);
@@ -26,20 +27,22 @@ public class CrawlingPracDemo {
 			System.out.println("성공");
 			
 			BufferedReader br = new BufferedReader(isr);
-			FileWriter fw = new FileWriter("C:\\dev\\test\\2021\\05\\23\\Crawling.csv");
-			@SuppressWarnings("resource")
-			BufferedWriter bw = new BufferedWriter(fw);
+//			FileWriter fw = new FileWriter("C:\\dev\\test\\2021\\05\\23\\health.csv");
+//			@SuppressWarnings("resource")
+//			BufferedWriter bw = new BufferedWriter(fw);
 			Elements elements = doc.select("table tbody tr");
 			for (Element element : elements) {
-				System.out.println(element);
+				String ele = element.text();
+				System.out.println(ele);
 			
+				
 			}
-			String readLine = null;
-			while ((readLine = br.readLine()) != null) {
-				bw.write(readLine);
-				bw.newLine();
-			}
-			bw.flush();
+//			String readLine = null;
+//			while ((readLine = br.readLine()) != null) {
+//				bw.write(readLine);
+//				bw.newLine();
+//			}
+//			bw.flush();
 			
 
 		} catch (MalformedURLException e1) {
