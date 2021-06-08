@@ -19,7 +19,7 @@ public class CrawlingPracDemo {
 	public static void main(String[] args) {
 		try {
 			Document doc = null;
-			String address = "https://news.seoul.go.kr/welfare/archives/201281";
+			String address = "https://www.blutouch.net/health/test4.asp";
 			URL url = new URL(address);
 			InputStream in = url.openStream();
 			InputStreamReader isr = new InputStreamReader(in);
@@ -30,10 +30,10 @@ public class CrawlingPracDemo {
 //			FileWriter fw = new FileWriter("C:\\dev\\test\\2021\\05\\23\\health.csv");
 //			@SuppressWarnings("resource")
 //			BufferedWriter bw = new BufferedWriter(fw);
-			Elements elements = doc.select("table tbody tr");
+			Elements elements = doc.select("dl dd");
 			for (Element element : elements) {
-				String ele = element.text();
-				System.out.println(ele);
+//				String ele = element.text();
+				System.out.println(element);
 			
 				
 			}
