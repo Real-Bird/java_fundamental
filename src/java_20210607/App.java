@@ -10,8 +10,6 @@ package java_20210607;
 	import org.jsoup.nodes.Element;
 	import org.jsoup.select.Elements;
 	 
-	import java_20210607.Crawler;
-	 
 	public class App {
 	    public static void main(String args[]){
 	        try {
