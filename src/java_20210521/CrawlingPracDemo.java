@@ -18,7 +18,7 @@ public class CrawlingPracDemo {
 	public static void main(String[] args) {
 		try {
 			Document doc = null;
-			String address = "https://en.wikipedia.org/wiki/Social_Progress_Index";
+			String address = "https://kras.kosha.or.kr/health/health_tab02";
 			URL url = new URL(address);
 			InputStream in = url.openStream();
 			InputStreamReader isr = new InputStreamReader(in);
@@ -28,7 +28,7 @@ public class CrawlingPracDemo {
 			BufferedReader br = new BufferedReader(isr);
 			//FileWriter fw = new FileWriter("C:\\dev\\test\\2021\\05\\23\\Crawling.csv");
 			//BufferedWriter bw = new BufferedWriter(fw);
-			Elements elements = doc.select(".wikitable tbody tr td a");
+			Elements elements = doc.select("div.health-gender-selector.mt20");
 			for (Element element : elements) {
 				System.out.println(element);
 			
